@@ -1,0 +1,27 @@
+A bitset is an array whose each value is either 1 or 0.
+
+For example, the following code creates a bitset that contains 10 elements:
+
+                        bitset<10> bs;
+                        s[1] = 1;
+                        s[3] = 1;
+                        s[4] = 1;
+                        s[8] = 0;
+
+                        cout<< s[4] << "    " << endl; // 1     0
+                        cout << s[8] << endl; // 0
+
+The main advantage of bitset, it is space efficient than arrays as it only uses one bit of memory.
+
+We can also convert a string with 0's and 1's to a bitset as follows:
+
+                        bitset<10> bs(strin("1001011111")); // It reads into the bitset from right -> left
+                        cout << s[4] << endl; // 0
+                        cout << s[2] << endl; // 1
+
+We can get the number of 1's in the string given using count() method:
+
+                        bitset<10> bs(strin("1001011111"));
+                        cout << bs.count() << endl; //7;
+
+                        
