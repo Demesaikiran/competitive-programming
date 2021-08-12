@@ -1,0 +1,41 @@
+A set is a data structure that maintains a collection of elements.
+The structure set is based on a balanced binary tree and its operations work in O (log n ) time.
+The structure unordered_set uses hashing, and its operations work in O (1) time on average.
+
+
+Basic Operations on set:
+
+                        insert(element) // Inserts element in the set
+                        erase(element) // Removes element from the set
+                        count(element) // prints either 0 or 1 for unordered_set 
+                                       // Not allows duplicates
+
+No access using []
+Basic usage of set:
+
+                        set<int> s = {2,5,6,8};
+                        cout << s.size() << "\n"; // 4
+                        for (auto x : s) 
+                            cout << x << "\n"; 
+                        
+We can trace that set using general method as vector in two ways:
+
+                        1. for(i, s.size(), i++)
+                        2. for(auto i: s) i // prints the elements of set
+
+C++ also contains multiset structure which stores all occurances of elements(duplicates allowed):
+
+                        multiset<int> s;
+                        s.insert(5);
+                        s.insert(5);
+                        s.insert(5);
+                        cout << s.count(5) << "\n"; // 3
+
+finding an element:
+                        s.find(5); // iterator storage
+                        auto it = s.find(x);
+                        if (it == s.end()) {
+                            // x is not found
+                        }
+                        s.erase(s.find(5)); // removes the element 5 only one occurance of it is removed.
+
